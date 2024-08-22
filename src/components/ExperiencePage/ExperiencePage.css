@@ -1,0 +1,70 @@
+.exp-title {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    margin: 0;
+    font-size: max(20px, 1.6vw);
+}
+
+.exp-company {
+    color: rgb(31, 28, 28);
+    font-weight: bold;
+    font-size: max(15px, 1.3vw);
+    margin: 0;
+}
+
+.exp-dates-location {
+    color: rgb(31, 28, 28);
+    font-size: max(12px, 1vw);
+    margin: 0;
+}
+
+.exp-description {
+    color: rgb(31, 28, 28);
+    font-size: max(14px, 1.1vw);
+    padding-right: 15px;
+}
+
+.stats-carousel {
+    height: 180px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.stat-card {
+    height: 160px;
+    width: 130px;
+    min-width: 130px;
+    min-height: 150px;
+    border: 2px;
+    border-radius: 10px;
+    border-color: rgb(31, 28, 28);
+    border-style: solid;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 8px 5px;
+    color: rgb(31, 28, 28);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-top {
+    margin: 0;
+    font-size: 15px;
+}
+
+.stat-middle {
+    margin: 0;
+    font-family: 'Oswald';
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.stat-bottom {
+    margin: 0;
+    font-size: 15px;
+}
