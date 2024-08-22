@@ -5,6 +5,7 @@ import '@mantine/core/styles.css';
 
 import { ExperiencePage, Navbar } from './components';
 import Footer from './components/Footer/Footer';
+import HomePage from './components/HomePage/HomePage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/'>
+              <Route path="" element={<HomePage />} />
               <Route path="experience" element={<ExperiencePage />}/>
             </Route>
           </Routes>
