@@ -1,6 +1,9 @@
 import './Navbar.css';
 import { Link, useLocation } from "react-router-dom";
 import { Avatar } from "@mantine/core";
+import { Drawer, ActionIcon } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import { MdDehaze } from "react-icons/md";
 
 
 const Locations = {
@@ -21,14 +24,6 @@ const NAVLINKS = [
         location: Locations.EXPERIENCE
     },
     {
-        text: "BLOG",
-        location: Locations.BLOG
-    },
-    {
-        text: "PORTFOLIO",
-        location: Locations.PORTFOLIO
-    },
-    {
         text: "RESUME",
         location: Locations.RESUME,
         useAnchor: true,
@@ -38,11 +33,12 @@ const NAVLINKS = [
 function Navbar() {
 
     const location = useLocation();
+    const [opened, { open, close }] = useDisclosure(false);
 
     return (
         <nav className="Nav">
             <div className='NavLeft'>
-                <Avatar variant="filled" size="lg">MS</Avatar>
+                <Avatar color="rgb(31, 28, 28)" variant="filled" size="lg">MS</Avatar>
                 <h1 className="name">Mansehaj Singh</h1>
             </div>
             <div className='NavRight'>
@@ -58,11 +54,46 @@ function Navbar() {
                     )
                 }
             </div>
+            <div className="NavRightSmall">
+                <ActionIcon 
+                    color="rgba(31, 28, 28)" 
+                    variant="filled"  
+                    size="xl" 
+                    radius="sm"
+                    onClick={open}
+                >
+                    <MdDehaze />
+                </ActionIcon>
+            </div>
+            <Drawer opened={opened} onClose={close}>
+                <div className="drawer-contents">
+                {
+                    NAVLINKS.map(link => 
+                        <Navlink 
+                            key={link.location} 
+                            text={link.text} 
+                            loc={link.location}
+                            active={location.pathname === `/${link.location}`}
+                            useAnchor={link.useAnchor}
+                            onClick={() => {
+                                if (opened) close();
+                            }}
+                        />
+                    )
+                }
+                </div>
+            </Drawer>
         </nav>
     );
 }
 
-const Navlink = ({ text = "", loc = Locations.HOME, active = false, useAnchor = false }) => {
+const Navlink = ({ 
+    text = "", 
+    loc = Locations.HOME, 
+    active = false, 
+    useAnchor = false, 
+    onClick = () => {}
+}) => {
 
     if (useAnchor) {
         return (
@@ -73,7 +104,7 @@ const Navlink = ({ text = "", loc = Locations.HOME, active = false, useAnchor = 
     }
 
     return (
-        <Link className={`Navlink ${active && 'Active-Navlink'}`} to={`/${loc}`}>
+        <Link onClick={onClick} className={`Navlink ${active && 'Active-Navlink'}`} to={`/${loc}`}>
             {text}
         </Link>
     );

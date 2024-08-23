@@ -28,6 +28,21 @@
     margin-right: 10%;
 }
 
+.NavRightSmall {
+    display: none;
+}
+
+
+.Navlink {
+    font-family: 'Oswald';
+    font-weight: 500;
+    text-decoration: none;
+    color: rgba(31, 28, 28, 0.6);
+    transition: color 0.3s ease;
+    font-size: 3vw;
+    margin-right: 40px;
+}
+
 @media screen and (max-width: 990px) {
     .NavLeft {
         width: 80%
@@ -36,16 +51,20 @@
     .NavRight {
         display: none;
     }
-}
 
-.Navlink {
-    font-family: 'Oswald';
-    font-weight: 500;
-    text-decoration: none;
-    color: rgba(31, 28, 28, 0.6);
-    transition: color 0.3s ease;
-    font-size: max(8px, 3vw);
-    margin-right: 40px;
+    .NavRightSmall {
+        align-items: center;
+        display: flex;
+        margin-right: 10%;
+    }
+
+    .Nav {
+        margin-bottom: 20px;
+    }
+
+    .Navlink {     
+        font-size: 40px;
+    }
 }
 
 .Navlink:hover {
@@ -54,4 +73,9 @@
 
 .Active-Navlink {
     color: rgba(31, 28, 28, 1) !important;
+}
+
+.drawer-contents {
+    display: flex;
+    flex-direction: column;
 }

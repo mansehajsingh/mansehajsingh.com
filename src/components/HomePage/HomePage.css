@@ -7,19 +7,25 @@
 
 .about-photo {
     min-width: 300px;
-    width: 50%;
+    width: 40%;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .about-info {
-    width: 50%;
+    width: 40%;
     min-width: 300px;
     padding: 0 20px;
 }
 
 @media screen and (max-width: 990px) {
+
+    .about-content {
+        justify-content: center;
+    }
     
     .about-info {
-        margin-top: 20px;
         padding: 0;
     }
 
