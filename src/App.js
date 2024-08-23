@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
 import './App.css';
 import '@mantine/core/styles.css';
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <MantineProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Navbar />
           <Routes>
             <Route path='/'>
@@ -20,7 +20,7 @@ function App() {
             </Route>
           </Routes>
           <Footer/>
-        </BrowserRouter>
+        </HashRouter>
       </MantineProvider>
     </div>
   );

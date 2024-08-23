@@ -6,7 +6,7 @@ function HomePage() {
     return (
         <Page title='ABOUT ME'>
             <div className="about-content">
-                <img className="about-photo" src="/aboutme.jpg"/>
+                <img className="about-photo" src={`${process.env.PUBLIC_URL}/aboutme.jpg`}/>
                 <div className="about-info">
                     <DetialCard 
                         icon={<FaUserGraduate size="40px" />}

@@ -7,11 +7,11 @@ import { MdDehaze } from "react-icons/md";
 
 
 const Locations = {
-    HOME: "",
-    EXPERIENCE: "experience",
-    BLOG: "blog",
-    PORTFOLIO: "portfolio",
-    RESUME: process.env.PUBLIC_URL + "Mansehaj_Singh_Resume_2024.pdf",
+    HOME: "/",
+    EXPERIENCE: "/experience",
+    BLOG: "/blog",
+    PORTFOLIO: "/portfolio",
+    RESUME: process.env.PUBLIC_URL + "/Mansehaj_Singh_Resume_2024.pdf",
 }
 
 const NAVLINKS = [
@@ -33,6 +33,7 @@ const NAVLINKS = [
 function Navbar() {
 
     const location = useLocation();
+    console.log(location.pathname)
     const [opened, { open, close }] = useDisclosure(false);
 
     return (
@@ -48,7 +49,7 @@ function Navbar() {
                             key={link.location} 
                             text={link.text} 
                             loc={link.location}
-                            active={location.pathname === `/${link.location}`}
+                            active={location.pathname === link.location}
                             useAnchor={link.useAnchor}
                         />
                     )
@@ -73,7 +74,7 @@ function Navbar() {
                             key={link.location} 
                             text={link.text} 
                             loc={link.location}
-                            active={location.pathname === `/${link.location}`}
+                            active={location.pathname === link.location}
                             useAnchor={link.useAnchor}
                             onClick={() => {
                                 if (opened) close();
@@ -97,14 +98,14 @@ const Navlink = ({
 
     if (useAnchor) {
         return (
-            <a className={`Navlink ${active && 'Active-Navlink'}`} target="_blank" href={`/${loc}`}>
+            <a className={`Navlink ${active && 'Active-Navlink'}`} target="_blank" href={loc}>
                 {text}
             </a>
         );
     }
 
     return (
-        <Link onClick={onClick} className={`Navlink ${active && 'Active-Navlink'}`} to={`/${loc}`}>
+        <Link onClick={onClick} className={`Navlink ${active && 'Active-Navlink'}`} to={loc}>
             {text}
         </Link>
     );
