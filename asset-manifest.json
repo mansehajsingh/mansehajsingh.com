@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mansehajsingh.com/static/css/main.0b976670.css",
+    "main.js": "/mansehajsingh.com/static/js/main.b9ec3264.js",
+    "static/js/453.2f65b7e8.chunk.js": "/mansehajsingh.com/static/js/453.2f65b7e8.chunk.js",
+    "index.html": "/mansehajsingh.com/index.html",
+    "main.0b976670.css.map": "/mansehajsingh.com/static/css/main.0b976670.css.map",
+    "main.b9ec3264.js.map": "/mansehajsingh.com/static/js/main.b9ec3264.js.map",
+    "453.2f65b7e8.chunk.js.map": "/mansehajsingh.com/static/js/453.2f65b7e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b976670.css",
+    "static/js/main.b9ec3264.js"
+  ]
+}
