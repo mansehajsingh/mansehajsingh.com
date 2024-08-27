@@ -1,7 +1,7 @@
 .App {
   overflow: hidden;
   background: rgb(0,147,69);
-  background: linear-gradient(45deg, rgb(4, 208, 99) 0%, rgb(253, 238, 33) 100%);
+  background: linear-gradient(45deg, #04d063 0%, #fdee21 100%);
   position: relative;
   width: 100%;
   min-height: 100vh;
