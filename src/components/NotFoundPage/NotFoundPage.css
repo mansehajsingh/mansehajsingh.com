@@ -1,0 +1,7 @@
+.not-found-disclaimer {
+    size: 16px;
+}
+
+.not-found-disclaimer > a {
+    color: #000;
+}
