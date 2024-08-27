@@ -39,8 +39,10 @@ function Navbar() {
     return (
         <nav className="Nav">
             <div className='NavLeft'>
-                <Avatar color="rgb(31, 28, 28)" variant="filled" size="lg">MS</Avatar>
-                <h1 className="name">Mansehaj Singh</h1>
+                <Link to="/">
+                    <Avatar color="rgb(31, 28, 28)" variant="filled" size="lg">MS</Avatar>
+                    <h1 className="name">Mansehaj Singh</h1>
+                </Link>
             </div>
             <div className='NavRight'>
                 {
