@@ -10,7 +10,7 @@ function HomePage() {
                 <div className="about-info">
                     <DetialCard 
                         icon={<FaUserGraduate size="40px" />}
-                        text='3rd year Computer Engineering student at the University of Waterloo'
+                        text='4th year Computer Engineering student at the University of Waterloo'
                     />
                     <p className="about-text">
                         <span className="about-poem">

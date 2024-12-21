@@ -11,7 +11,7 @@ const Locations = {
     EXPERIENCE: "/experience",
     BLOG: "/blog",
     PORTFOLIO: "/portfolio",
-    RESUME: process.env.PUBLIC_URL + "/Mansehaj_Singh_Resume_2024.pdf",
+    RESUME: process.env.PUBLIC_URL + "/Mansehaj_Singh_Resume.pdf",
 }
 
 const NAVLINKS = [

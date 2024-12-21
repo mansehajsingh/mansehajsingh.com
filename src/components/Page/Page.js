@@ -7,7 +7,7 @@ function Page({ title = "", children }) {
         <div className="page">
             <div className="page-row">
                 <div className="page-sidebar">
-                    <div className="page-banner">Currently seeking Winter and Summer 2025 roles!</div>
+                    <div className="page-banner">Currently seeking Summer 2025 roles!</div>
                     <ContactCard />
                 </div>
                 <div className="page-main">

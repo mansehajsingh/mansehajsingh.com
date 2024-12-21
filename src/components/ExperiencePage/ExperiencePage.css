@@ -1,7 +1,12 @@
+.exp-content {
+    margin-left: 20px;
+}
+
 .exp-title {
     font-family: 'Helvetica';
     font-weight: bold;
     margin: 0;
+    margin-left: 20px;
     font-size: max(20px, 1.6vw);
 }
 
